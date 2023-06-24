@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {Observable} from "rxjs";
 export interface Post {
   title: string,
   text: string,
@@ -10,19 +11,10 @@ export interface Post {
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  search = '';
-  searchField = 'title';
+  p: Promise<string> = new Promise<string>(resolve => {
+    setTimeout(() => {
+      resolve('Promise resolved')
+    }, 2000);
+  });
 
-  posts: Post[] = [
-    {title: 'Beer', text: 'Самое лучшее пиво в городе'},
-    {title: 'Wine', text: 'Самое лучшее вино в мире'},
-    {title: 'Bread', text: 'Хлеб да каша пища наша'}
-  ]
-
-  addPost() {
-    this.posts.unshift({
-      title: 'New post',
-      text: 'Text new post'
-    })
-  }
 }
