@@ -3,7 +3,21 @@
 <p>{{ e | number: '1.1-5'}}</p>
 <p>{{ e | number: '3.1-2'}}</p>
 
-<p> {{ str | uppercase | lowercase | titlecase}}</p>
-<p> {{ str | slice:1:5 }} </p>
-<p> {{ str | slice:1:-2 }} </p>
+<p>{{ str | uppercase | lowercase | titlecase}}</p>
+<p>{{ str | slice:1:5 }}</p>
+<p>{{ str | slice:1:-2 }}</p>
+<p> Current date: {{ date | date: 'dd/MM/YYYY HH:mm:ss' }}</p>
 
+<p>{{ float }}</p>
+<p>{{ float | currency: 'RUB' }}</p>
+<p>{{ float | percent }}</p>
+
+<pre>{{ obj | json }}</pre>
+
+<p> {{ 10 | mult }}</p>
+<p> {{ 10 | mult:2 }}</p>
+<p> {{ 10 | mult:10 }}</p>
+<p> {{ 10 | mult: 13 }}</p>
+<p> {{ 10 | mult: 50 }}</p>
+
+<p>{{ 'asf dfvfv rfd     ' | exMult }}</p>
