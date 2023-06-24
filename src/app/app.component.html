@@ -4,4 +4,8 @@
 <!--  <p appStyle="green">Lorem ipsum.</p>-->
   <p appStyle="green" fontWeight="bold" [dStyle]="{border: '1px solid red', borderRadius: '15px'}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, iusto?</p>
 
+  <button class="btn" (click)="isVisible = !isVisible">Toggle</button>
+  <div *appIfnot="!isVisible" class="wrap">
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, laboriosam.</p>
+  </div>
 </div>
