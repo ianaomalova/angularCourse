@@ -1,24 +1,21 @@
 import { Component } from '@angular/core';
-
+export interface Post {
+  title: string,
+  text: string,
+  [key: string]: string; // Индексная сигнатура
+}
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  e = Math.E;
-  str = 'hello world'
-  date = new Date();
-  float = 0.42;
+  search = '';
+  searchField = 'title';
 
-  obj = {
-    a: 1,
-    b: {
-      c: 2,
-      d: {
-        e: 4,
-        f: 5
-      }
-    }
-  }
+  posts: Post[] = [
+    {title: 'Beer', text: 'Самое лучшее пиво в городе'},
+    {title: 'Wine', text: 'Самое лучшее вино в мире'},
+    {title: 'Bread', text: 'Хлеб да каша пища наша'}
+  ]
 }
