@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   e = Math.E;
+
+  str = 'hello world'
 }
