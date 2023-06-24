@@ -18,4 +18,11 @@ export class AppComponent {
     {title: 'Wine', text: 'Самое лучшее вино в мире'},
     {title: 'Bread', text: 'Хлеб да каша пища наша'}
   ]
+
+  addPost() {
+    this.posts.unshift({
+      title: 'New post',
+      text: 'Text new post'
+    })
+  }
 }
