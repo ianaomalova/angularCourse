@@ -3,7 +3,11 @@
   <h2>App counter: {{ getterAppCounter().counter }}</h2>
   <button class="btn" (click)="getterAppCounter().increment()">+</button>
   <button class="btn" (click)="getterAppCounter().decrement()">-</button>
-
+</div>
+<div class="card">
+  <h2>local counter: {{ getterLocalCounter().counter }}</h2>
+  <button class="btn" (click)="getterLocalCounter().increment()">+</button>
+  <button class="btn" (click)="getterLocalCounter().decrement()">-</button>
 </div>
 
 
