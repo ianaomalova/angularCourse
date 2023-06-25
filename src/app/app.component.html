@@ -1,14 +1,9 @@
-<h2>Angular pipes</h2>
+<h2>Angular services</h2>
+<div class="card">
+  <h2>App counter: {{ getterAppCounter().counter }}</h2>
+  <button class="btn" (click)="getterAppCounter().increment()">+</button>
+  <button class="btn" (click)="getterAppCounter().decrement()">-</button>
 
-<input type="text" [(ngModel)]="search">
-
-<button (click)="searchField = 'title'" class="btn">Title</button>
-<button (click)="searchField = 'text'" class="btn">Text</button>
-
-<button (click)="addPost()" class="btn">Добавить новый пост</button>
-
-<div *ngFor="let post of posts | filter: search: searchField" class="card">
-  <h2>{{ post.title }}</h2>
-  <p>{{ post.text }}</p>
 </div>
+
 

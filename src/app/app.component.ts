@@ -1,28 +1,17 @@
 import { Component } from '@angular/core';
-export interface Post {
-  title: string,
-  text: string,
-  [key: string]: string; // Индексная сигнатура
-}
+import {AppCounterService} from "./services/app-counter.service";
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  search = '';
-  searchField = 'title';
+  constructor(private appCounterService: AppCounterService) {
 
-  posts: Post[] = [
-    {title: 'Beer', text: 'Самое лучшее пиво в городе'},
-    {title: 'Wine', text: 'Самое лучшее вино в мире'},
-    {title: 'Bread', text: 'Хлеб да каша пища наша'}
-  ]
-
-  addPost() {
-    this.posts.unshift({
-      title: 'New post',
-      text: 'Text new post'
-    })
   }
+  getterAppCounter() {
+    return this.appCounterService;
+  }
+
 }
